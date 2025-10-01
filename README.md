@@ -34,6 +34,7 @@ TwOP Architecture is a **vanilla-first, minimalist, and highly organized archite
    - Backend focuses on data handling and business logic.  
    - Supports REST or GraphQL (optional). 
    - Supports the dotenv library, where the .env file should always be stored in the /private directory.
+   - Supports PWAs, in which the service-workers and manifest can live in the root of the /public directory.
 
 ---
 
@@ -57,5 +58,24 @@ ProjectRoot/
 └── README.md
 ```
 
-## Liscense
+---
+
+## **File & Function Naming Conventions**
+
+- **Files:** kebab-case.js
+   - Example: product-service.js, cart-route.js
+
+- **Functions:** camelCase
+   - Example: myFunction, mathLogic
+
+**Errors:** Handle errors wherever possible, avoid duplicates.
+
+**Async:** You may use top-level async/await with ES Modules; CommonJS also supported.
+
+## **Getting Started**
+
+- You may clone this repository and use it to build your project.
+- You may also follow the style described in this readme instead.
+
+## **License**
 This project is fully open source under the MIT License.
