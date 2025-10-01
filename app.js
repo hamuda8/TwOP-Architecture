@@ -4,7 +4,7 @@ import { join, extname } from 'path';
 import { helloWorldRoute } from './private/routes/hello-world.js';
 import { logHello } from './private/helpers.js';
 
-const PORT = 7000;
+const PORT = 3000;
 const PUBLIC_DIR = './public';
 
 const CONTENT_TYPES = {
