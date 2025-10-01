@@ -77,5 +77,18 @@ ProjectRoot/
 - You may clone this repository and use it to build your project.
 - You may also follow the style described in this readme instead.
 
+---
+
+## **Usage Philosophy**
+- **Minimal Libraries:** Only add libraries if they are minimal and extremely needed.
+- **Optional Models:** Use only if your database requires or benefits from schemas.
+- **Optional Handlers:** Can merge routes and services into handlers/ if desired.
+- **TwOP Principles:** Always respect the separation of Private (backend) and Public (frontend).
+
+---
+
+## **Conclusion**
+TwOP Architecture provides a lightweight, clear, and maintainable structure for vanilla-first projects. It balances simplicity, scalability, and modularity, making it perfect for all kinds of projects, regardless if they are small, medium, or even large projects.
+
 ## **License**
 This project is fully open source under the MIT License.
