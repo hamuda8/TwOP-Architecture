@@ -1,3 +1,42 @@
+:root {
+  color-scheme: light dark;
+
+   /* SCHEME APPLICATION RULE:
+    - 50% (Dominant Canvas): --base and --surface
+    - 40% (Structure, Text & Brand Space): --core, --depth, and --prime
+    - 10% (Action Points): --accent and --variant
+    NOTE: No external colors shall be used at all.
+   */
+
+  /* Colors Helm (Manage) */
+  --color-a:; /* The color for main interactive elements like primary buttons, active links, and selection states */
+  --color-v:; /* The color reserved for hover states, focused inputs, or active button pressed states */
+  --color-s:; /* The background color for structural cards, banners, sidebars, and navigation headers */
+  --color-d:; /* The color for borders, dividers, subtle lines, or recessed wells like form input fields */
+  --color-p:; /* The identity color used to anchor the brand's presence, in hero section backgrounds, logo accents, or large typography */
+
+  /* Structural Anchor (Constant) */
+  --base: light-dark(#ffffff, #545454); /* The main background through the entire project */
+  --core: light-dark(#545454, #ffffff); /* The color for primary body text, titles, and structural icons */
+
+  /* Palette Sail (Variable) */
+  --accent: light-dark(var(--color-a), color-mix(in oklab, var(--color-a) 54%, contrast-color(var(--color-a))));
+  --variant: light-dark(var(--color-v), color-mix(in oklab, var(--color-v) 54%, contrast-color(var(--color-v))));
+  --surface: light-dark(var(--color-s), color-mix(in oklab, var(--color-s) 54%, contrast-color(var(--color-s))));
+  --depth: light-dark(var(--color-d), color-mix(in oklab, var(--color-d) 54%, contrast-color(var(--color-d))));
+
+  /* Contextual Pennant (Optional) */
+  --prime: light-dark(var(--color-p), color-mix(in oklab, var(--color-p) 54%, contrast-color(var(--color-p))));
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 .text {
     text-align: center;
 }
