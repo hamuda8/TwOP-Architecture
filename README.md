@@ -23,9 +23,10 @@ By enforcing this strict boundary, TwOP eliminates monolithic coupling, prevents
 TwOP is no longer just a boilerplate—it is a dynamic generator. You can instantly scaffold a perfectly decoupled TwOP project using your favorite modern frameworks.
 
 ### Generate a new project:
+The officially recommended way to scaffold a TwOP project is using `npx`. This ensures you are always using the latest origin templates.
+
 ```bash
-# Run the generator locally
-node cli.js
+npx create-twop-app@latest
 ```
 
 The CLI will prompt you to assemble your architecture from our highly optimized parts bin.
