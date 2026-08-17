@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Node.js Fastify backend for TwOP Architecture",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
     "fastify": "^4.24.0",
-    "@fastify/static": "^6.7.0",
+    "@fastify/static": "^6.7.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.3"
   }
 }

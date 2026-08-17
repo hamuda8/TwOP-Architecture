@@ -1,12 +1,19 @@
 <script>
-  let message = ''
+  import { onMount } from 'svelte';
 
-  import { onMount } from 'svelte'
+  let message = '';
 
   onMount(async () => {
-    const { data } = await fetch('/api/hello').then(r => r.json())
-    message = data.message
-  })
+    const res = await fetch('/api/hello');
+    const data = await res.json();
+    message = data.message;
+  });
+
+  const loadApi = async () => {
+    const res = await fetch('/api/hello');
+    const data = await res.json();
+    message = data.message;
+  };
 </script>
 
 <h1>Svelte + Vite SPA</h1>
@@ -19,4 +26,4 @@
   {/if}
 </div>
 
-<button on:click="{async () => { const { data } = await fetch('/api/hello').then(r => r.json()); message = data.message }}">Load from /api/hello</button>
+<button on:click={loadApi}>Load from /api/hello</button>

@@ -1,23 +1,29 @@
-<script defer>
-  fetch('/api/hello').then(res => res.json()).then(data => {
-    document.getElementById('message').textContent = data.message
-  })
-</script>
+// Alpine + Tailwind App Logic
+document.addEventListener('alpine:init', () => {
+  Alpine.data('apiApp', () => ({
+    message: '',
+    loadApi: async function() {
+      try {
+        const res = await fetch('/api/hello')
+        const data = await res.json()
+        this.message = data.message
+      } catch (e) {
+        this.message = 'Error loading API'
+      }
+    }
+  }))
+})
 
-<script>
-  document.getElementById('loadApiBtn').addEventListener('click', async () => {
-    const res = await fetch('/api/hello')
-    const data = await res.json()
-    document.getElementById('message').textContent = data.message
-  })
-</script>
-
-<style>
-  .btn-primary {
-    @apply bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-100 transition-colors;
-  }
-  
-  .api-status {
-    @apply mt-4 p-4 bg-gray-50 rounded border-l-4 border-blue-500;
-  }
-</style>
+// Initial fetch on load
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/hello')
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById('message')
+      if (el) el.textContent = data.message
+    })
+    .catch(() => {
+      const el = document.getElementById('message')
+      if (el) el.textContent = 'Error loading API'
+    })
+})

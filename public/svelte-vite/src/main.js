@@ -1,8 +1,4 @@
-import { onMount } from 'svelte'
+import { createApp } from 'svelte';
+import App from './App.svelte';
 
-onMount(async () => {
-  const { data } = await fetch('/api/hello').then(r => r.json())
-  message = data.message
-})
-
-let message = ''
+createApp(App).mount('#app');

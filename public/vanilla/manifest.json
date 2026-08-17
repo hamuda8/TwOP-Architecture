@@ -1,0 +1,10 @@
+{
+  "name": "Vanilla TwOP Engine",
+  "short_name": "TwOP",
+  "description": "Vanilla TwOP Architecture Demo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": []
+}
