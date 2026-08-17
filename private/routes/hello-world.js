@@ -1,16 +1,11 @@
-import { serveDemoPage } from '../services/hello-world.js';
+import { renderFile } from '../helpers/render-file.js';
 
-export async function helloWorldRoute(req, res) {
-  try {
-    if (req.url === '/') {
-      // Delegate all logic to the service
-      await serveDemoPage(res);
-    } else {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found');
-    }
-  } catch (err) {
-    res.writeHead(500, { 'Content-Type': 'text/plain' });
-    res.end('500 Internal Server Error');
-  }
+export async function serveDemoPage(res) {
+    // Example of passing state from the backend directly to the frontend
+    const serverState = {
+        message: "Welcome to the Vanilla TwOP Architecture",
+        timestamp: Date.now()
+    };
+
+    await renderFile(res, 'markup/index.html', serverState);
 }

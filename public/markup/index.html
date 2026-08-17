@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en" dir="ltr">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo HTML Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vanilla TwOP Engine</title>
 
+    <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/styles/style.css">
-    </head>
-    <body>
-        <p class="text">Hello World!</p>
+</head>
+<body>
+    <main class="container">
+        <p class="text" id="welcome-text">Hello World!</p>
+    </main>
 
-        <script src="/scripts/index.js"></script>
-    </body>
+    <script src="/scripts/index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
+    </script>
+</body>
 </html>
