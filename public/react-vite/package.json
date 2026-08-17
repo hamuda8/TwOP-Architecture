@@ -1,0 +1,16 @@
+{
+  "name": "react-vite",
+  "version": "1.0.0",
+  "description": "React + Vite frontend for TwOP Architecture",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "axios": "^1.7.0"
+  }
+}
