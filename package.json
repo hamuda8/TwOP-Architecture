@@ -1,12 +1,28 @@
 {
-  "name": "twop-architecture",
+  "name": "create-twop-app",
   "version": "1.0.0",
-  "description": "A vanilla-first NodeJS + VanillaJS project structure with clear separation of frontend and backend, modular services, and minimal library use.",
+  "description": "A universal, strictly-decoupled CLI generator for building modern web applications using the TwOP Architecture.",
   "license": "MIT",
   "author": "Wufour",
   "type": "module",
-  "main": "app.js",
+  "bin": {
+    "create-twop-app": "./cli.js"
+  },
+  "keywords": [
+    "cli",
+    "generator",
+    "twop",
+    "architecture",
+    "vanilla",
+    "express",
+    "vite",
+    "decoupled"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamuda8/TwOP-Architecture.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node cli.js"
   }
 }
