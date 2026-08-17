@@ -46,7 +46,7 @@ ProjectRoot/
 │   ├── models/            # Optional data schemas
 │   ├── routes/            # Route handlers
 │   ├── services/          # Logic functions
-│   └── helpers.js         # Utility functions (if any)
+│   └── helpers/         # Utility functions (if any)
 ├── public/                # Frontend folder
 │   ├── assets/            # Assets used
 │   ├── markup/            # HTML files

@@ -2,7 +2,7 @@ import { createServer } from 'http';
 import { readFile } from 'fs/promises';
 import { join, extname } from 'path';
 import { helloWorldRoute } from './private/routes/hello-world.js';
-import { logHello } from './private/helpers.js';
+import { logHello } from './private/helpers/helper.js';
 
 const PORT = 3000;
 const PUBLIC_DIR = './public';
