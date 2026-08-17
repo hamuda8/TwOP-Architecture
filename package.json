@@ -1,6 +1,6 @@
 {
   "name": "create-twop-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A universal, strictly-decoupled CLI generator for building modern web applications using the TwOP Architecture.",
   "license": "MIT",
   "author": "Wufour",
